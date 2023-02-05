@@ -8,7 +8,7 @@ class AirConditionMapper {
         val niceList = arrayListOf<AirConditionUIModel>()
         val normalList = arrayListOf<AirConditionUIModel>()
         data.records.forEach {
-            if (it.pm2_5.isNotEmpty() && it.pm2_5.toInt() > 10) {
+            if (it.pm2_5.isNotEmpty() && it.pm2_5.toInt() > 30) {
                 val airConditionUIModel = AirConditionUIModel(it.county, it.pm2_5, it.siteId, it.siteName, it.status)
                 normalList.add(airConditionUIModel)
             }else{

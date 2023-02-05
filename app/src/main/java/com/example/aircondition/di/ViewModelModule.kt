@@ -11,6 +11,5 @@ val viewModelModule = module {
     }
     single {
         FetchAirConditionDataUseCase(AirRepoImpl(service = get(), mapper = get()))
-//        FetchAirConditionDataUseCase(repo = get())
     }
 }

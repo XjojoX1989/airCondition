@@ -26,13 +26,4 @@ class AirRepoImpl(
             }
         }.flowOn(Dispatchers.IO)
     }
-
-    override fun getAirCondition2(): Flow<Pair<List<AirConditionUIModel>, List<AirConditionUIModel>>> {
-        return flow {
-            val result = service.getAirConditionList2()
-            emit(mapper.toAirConditionUIModelList(result))
-        }.flowOn(Dispatchers.IO)
-    }
-
-
 }

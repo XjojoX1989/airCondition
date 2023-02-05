@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_air_pollution"
     app:startDestination="@id/fAirCondition">
     <fragment
         android:id="@+id/fAirCondition"
-        android:name="com.example.aircondition.view.AirConditionFragment" />
-
+        android:name="com.example.aircondition.view.AirConditionFragment"
+        tools:layout="@layout/fragment_air_condition">
+        <action
+            android:id="@+id/action_to_search_view"
+            app:destination="@id/fSearchList" />
+    </fragment>
+    <fragment
+        android:id="@+id/fSearchList"
+        android:name="com.example.aircondition.view.SearchListFragment"
+        tools:layout="@layout/fragment_search_list" />
 </navigation>

@@ -8,6 +8,4 @@ interface AirRepo {
         limit: String,
         apiKey: String,
     ): Flow<Pair<List<AirConditionUIModel>, List<AirConditionUIModel>>>
-
-    fun getAirCondition2(): Flow<Pair<List<AirConditionUIModel>, List<AirConditionUIModel>>>
 }

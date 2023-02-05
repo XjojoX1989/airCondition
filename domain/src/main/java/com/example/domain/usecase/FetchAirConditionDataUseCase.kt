@@ -9,7 +9,6 @@ class FetchAirConditionDataUseCase(private val repo: AirRepo) {
         limit: String,
         apiKey: String,
     ): Flow<Pair<List<AirConditionUIModel>, List<AirConditionUIModel>>> {
-//        return repo.getAirCondition(limit, apiKey)
-        return repo.getAirCondition2()
+        return repo.getAirCondition(limit, apiKey)
     }
 }
